@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# @name Subscale Rocket
+#
+# @type Rocket
+# @class Rocket
+#
+# @maintainer Thomas Wang <ewang68@ucsc.edu>
+#
+
+. ${R}etc/init.d/rc.rocket_defaults
+
+#
+# TUNING GAINS
+#
+param set-default BAT1_N_CELLS 0 # unknown battery cell count
+
+#
+# SETTINGS
+#
+# 2 - always activates non-throttling actuators (aerobrake motor controller)
+param set-default COM_PREARM_MODE 2  # always in prearm state
+param set-default CBRK_IO_SAFETY 22027 # disable IO safety circuit breaker
+param set-default SDLOG_PROFILE 17
+param set-default SDLOG_MODE 2 # continuous logging from startup to shutdown
+#param set-default MAV_0_MODE 1 # custom???
+param set-default MAV_0_CONFIG 101 # serial connection through TELEM1
+param set-default GPS_UBX_DYNMODEL 8
+param set-default CA_FAILURE_MODE 0 # ignore motor failure
