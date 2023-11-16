@@ -1,0 +1,40 @@
+#!/bin/sh
+#
+# Rocket default parameters.
+#
+# NOTE: Script variables are declared/initialized/unset in the rcS script.
+#
+
+set VEHICLE_TYPE fw
+
+# MAV_TYPE_GENERIC 0
+param set-default MAV_TYPE 0
+
+# multicopter estimator group efk2
+param set-default SYS_MC_EST_GROUP 1
+
+# Disable attitude control
+#param set MC_ROLLRATE_P 0
+#param set MC_PITCHRATE_P 0
+#param set MC_YAWRATE_P 0
+#param set MC_ROLL_P 0
+#param set MC_PITCH_P 0
+#param set MC_YAW_P 0
+
+# Disable altitude control
+#param set MPC_Z_P 0
+#param set MPC_Z_VEL_P 0
+#param set MPC_Z_VEL_I 0
+#param set MPC_Z_VEL_D 0
+
+# Disable position control
+#param set MC_POS_P 0
+#param set MC_POS_I 0
+#param set MC_POS_D 0
+
+# 8: airborne with <4g acceleration
+#param set-default GPS_UBX_DYNMODEL 8
+
+# GPS1
+
+# GPS2
